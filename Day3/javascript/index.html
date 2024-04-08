@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="myButton">click me</button>
+    <script>
+      const myButton = document.getElementById("myButton");
+      myButton.addEventListener("click", () => {
+        alert("Button Clicked");
+      });
+      let a = ["a", "b", "c"];
+      let cpy = [...a];
+      console.log(cpy);
+    </script>
+  </body>
+</html>

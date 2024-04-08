@@ -1,0 +1,28 @@
+/* This code defines styles for a parent element with the class "Parent". */
+
+.Parent {
+  /* Styles for an ordered list (ol) inside the parent element */
+  ol {
+    background-color: royalblue;
+  }
+
+  /* Styles for the first unordered list (ul) inside the parent element */
+  ul:first-child {
+    background-color: red;
+  }
+
+  /* Styles for the last unordered list (ul) inside the parent element */
+  ul:last-child {
+    background-color: green;
+  }
+
+  /* Styles for the second list item (li) inside the last unordered list */
+  ul:last-child li:nth-child(2) {
+    background-color: yellow;
+    width: fit-content;
+  }
+}
+
+.parent2 ul {
+  background-color: red;
+}

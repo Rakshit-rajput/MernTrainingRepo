@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#Navbar {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+  background-color: blueviolet;
+}
+#heading {
+  font-size: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+span {
+  color: #f1c40f;
+  border: #333;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+#doc {
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  background-color: blanchedalmond;
+  padding: 10px;
+  margin: 10px;
+}
