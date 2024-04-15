@@ -63,18 +63,22 @@ const htmlTemplate = fs.readFileSync("./templates/page.html", {
 });
 const cardTemplate = fs.readFileSync("./templates/card.html", "utf-8");
 const navbarTemplate = fs.readFileSync("./templates/navbar.html", "utf-8");
+const footerTemplate = fs.readFileSync("./templates/footer.html", "utf-8");
 
 const products = JSON.parse(data).products;
 const allCards = products.map((elem) => {
   let newCard = cardTemplate;
   newCard = newCard.replace("__TITLE__", elem.title);
   newCard = newCard.replace("__INFO__", elem.description);
+  newCard = newCard.replace("__IMAGE__", elem.thumbnail);
+  newCard = newCard.replace("__URL__", elem.url);
   return newCard;
 });
 const allCardsString = allCards.join(" ");
 const page = htmlTemplate
   .replace("__PRODUCTS_CARDS__", allCardsString)
-  .replace("__NAVBAR__", navbarTemplate);
+  .replace("__NAVBAR__", navbarTemplate)
+  .replace("__FOOTER__", footerTemplate);
 
 const server = http.createServer((req, res) => {
   console.log(req.url);
